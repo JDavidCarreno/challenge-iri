@@ -31,14 +31,13 @@ export function Login({ setIsLogged }) {
                 user = response[0].fields;
                 if (user.password === password) {
                     setIsLogged(true);
-                    navigate("/form")
+                    navigate(`/form/${user.Id}`)
                 } else {
                     setErrorPassword(true);
                 }
             } else {
                 setErrorEmail(true);
             }
-            console.log(user);
         } catch (error) {
             console.error(error);
         }

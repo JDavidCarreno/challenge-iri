@@ -4,6 +4,8 @@ import { Login } from './components/Login'
 import { Routes, Route, useNavigate } from "react-router-dom"
 import { Form } from './components/Form'
 import { useEffect } from 'react'
+import { Thankyou } from './components/Thankyou'
+import { Error } from './components/Error'
 
 function App() {
 
@@ -20,7 +22,9 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Login setIsLogged={setIsLogged}/>}/>
-        <Route path='/form' element={<Form/>}/>
+        <Route path='/form/:id' element={<Form/>}/>
+        <Route path='/thankyou' element={<Thankyou/>} />
+        <Route path='/error' element={<Error/>} />
       </Routes>
     </>
   )
