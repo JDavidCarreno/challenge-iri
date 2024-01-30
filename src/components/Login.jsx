@@ -2,6 +2,10 @@ import { useState } from "react";
 import Airtable from 'airtable';
 import { useNavigate } from "react-router-dom"
 
+// const API_KEY = import.meta.env.API_KEY
+// console.log(API_KEY);
+// const BASE = import.meta.env.BASE
+
 const base = new Airtable({apiKey: "patOnctnkl802BFlq.c57de8a152658f255a26e0ddadc8b13eb89fa4721ab2b8d4bd830e2e9e2add66"}).base("appRE0DxJYPgqD0Li");
 
 // eslint-disable-next-line react/prop-types
